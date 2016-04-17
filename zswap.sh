@@ -30,7 +30,7 @@ resetSwap() {
 
 ## makeSwap function accepts integer as $1
 enableZmodule() {
- makeSwap "$(zramctl -f -s ${size[$1]} -a ${algo[$1]} -t ${threads[$1]})"
+ makeSwap "$(zramctl -f -s 1G -a lz4 -t 4)"
 }
 
 case $1 in
