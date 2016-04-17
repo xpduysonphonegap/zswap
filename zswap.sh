@@ -8,10 +8,10 @@
 mem_array=($(free -m))
 declare -r mem_size=${mem_array[7]}
 unset mem_array;
-declare -a size=($[mem_size/2]M)
-declare -a algo=(lzo)
+declare -a size=1G
+declare -a algo=(lz4)
 declare -a threads=($(nproc))
-declare -r num_devices=1
+declare -r num_devices=4
 
 makeSwap() {
  mkswap "$1"
